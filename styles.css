@@ -27,18 +27,49 @@ body {
 h1 {
     font-size: 2.5rem;
     color: #000;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8rem;
     font-weight: 700;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .input-container {
     display: flex;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     margin-bottom: 1rem;
+    width: 100%;
+}
+
+.input-container > * {
+    width: 100%;
+}
+
+.input-container button {
+    margin-top: 0.5rem;
+}
+
+.cf-inputs {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.cf-inputs input {
+    flex: 1;
+}
+
+#problemLetter {
+    flex: 0.5;
+    text-transform: uppercase;
 }
 
 input {
-    flex: 1;
     padding: 1rem;
     border: 2px solid #eaeaea;
     border-radius: 10px;
@@ -71,6 +102,35 @@ button {
 button:hover {
     background: #333;
     transform: translateY(-2px);
+}
+
+.platform-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.platform-btn {
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    color: #666;
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.platform-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+}
+
+.platform-btn.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
 }
 
 .hint {
