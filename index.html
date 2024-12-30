@@ -7,25 +7,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>USACO • CSES • CF</h1>
-        <h2>Problem ID Navigator</h2>
-        <div class="platform-selector">
-            <button class="platform-btn active" data-platform="usaco">USACO</button>
-            <button class="platform-btn" data-platform="cses">CSES</button>
-            <button class="platform-btn" data-platform="cf">Codeforces</button>
-        </div>
-        <div class="input-container">
-            <div class="cf-inputs" style="display: none;">
-                <input type="number" id="contestId" placeholder="Contest ID" min="1">
-                <input type="text" id="problemLetter" placeholder="Problem (A/B/C)" maxlength="1">
+    <div class="wrapper">
+        <div class="container">
+            <div class="content-box">
+                <h1>USACO • CSES • CF</h1>
+                <h2>Problem ID Navigator</h2>
+                <div class="platform-selector">
+                    <button class="platform-btn active" data-platform="usaco">USACO</button>
+                    <button class="platform-btn" data-platform="cses">CSES</button>
+                    <button class="platform-btn" data-platform="cf">Codeforces</button>
+                </div>
+                <div class="input-container">
+                    <div class="cf-inputs" style="display: none;">
+                        <input type="number" id="contestId" placeholder="Contest ID" min="1">
+                        <input type="text" id="problemLetter" placeholder="Problem (A/B/C)" maxlength="1">
+                    </div>
+                    <input type="number" id="questionId" placeholder="Enter Problem ID" min="1">
+                    <button onclick="navigateToQuestion()">Go</button>
+                </div>
+                <p class="hint" id="usacoHint" style="display: block;">Example: 1275 (Dec 2022 Silver)</p>
+                <p class="hint" id="csesHint" style="display: none;">Example: 1192 (Counting Rooms)</p>
+                <p class="hint" id="cfHint" style="display: none;">Example: Contest 702 Problem B (Powers of Two)</p>
             </div>
-            <input type="number" id="questionId" placeholder="Enter Problem ID" min="1">
-            <button onclick="navigateToQuestion()">Go</button>
         </div>
-        <p class="hint" id="usacoHint" style="display: block;">Example: 1275 (Dec 2022 Silver)</p>
-        <p class="hint" id="csesHint" style="display: none;">Example: 1192 (Counting Rooms)</p>
-        <p class="hint" id="cfHint" style="display: none;">Example: Contest 702 Problem B (Powers of Two)</p>
+        <footer>
+            <p>Created by <a href="https://github.com/zigaowang">Zigao Wang</a> • <a href="https://github.com/ZigaoWang/usaco-cses-cf-navigator/blob/main/LICENSE">MIT License</a></p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
